@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <script defer src="face-api.min.js"></script>
+  <script defer src="face-api.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.0"> </script>
   <script defer src="script.js"></script>
   <style>
-    body {
+    #loading {
+      text-align: center;
+    }
+
+    #video_area {
       margin: 0;
       padding: 0;
-      width: 100vw;
-      height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: center;      
       position: relative;
     }
 
@@ -26,6 +28,11 @@
   </style>
 </head>
 <body>
-  <video id="video" width="720" height="560" autoplay muted></video>
+  <div>
+    <div id="loading">huge models are loading, please wait...</div>
+    <div id="video_area">
+      <video id="video" width="720" height="560" autoplay muted></video>
+    </div>
+</div>
 </body>
 </html>
